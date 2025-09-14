@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrankMoteur Crypto — Actus, prix & outils</title>
+  <meta name="description" content="Actus crypto, prix en direct, guides rapides. Emplacements prêts pour vos codes d’annonces." />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0f13" />
+  <meta property="og:title" content="CrankMoteur Crypto — Actus, prix & outils" />
+  <meta property="og:description" content="Actus crypto, prix en direct, guides rapides. Emplacements prêts pour vos codes d’annonces." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0f13/ffffff&text=CrankMoteur+Crypto" />
+
+  <!-- Scripts publicitaires -->
+  <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371779"></script>
+  <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371777"></script>
+  <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371775"></script>
+  <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371773"></script>
+
+  <style>
+    :root{--bg:#0b0f13;--panel:#111823;--muted:#677185;--text:#e6edf6;--brand:#6ee7ff;--accent:#9bffce;--bad:#ff6b6b;--good:#49e28f}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto;padding:16px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#0b0f13 70%,rgba(11,15,19,0.7));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid #1a2433}
+    .nav{display:flex;align-items:center;gap:14px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .brand .dot{height:10px;width:10px;border-radius:999px;background:radial-gradient(circle at 30% 30%, var(--accent), var(--brand));box-shadow:0 0 18px var(--brand)}
+    .navlinks{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #263247;background:#0e1520;color:var(--text);padding:10px 14px;border-radius:14px}
+    .btn:hover{border-color:#384a6a}
+    .grid{display:grid;gap:18px}
+    .hero{display:grid;gap:16px;padding:24px;background:linear-gradient(135deg,#0d171f 0%,#0c0f1a 60%,#101a22 100%);border:1px solid #1a2433;border-radius:18px}
+    .hero h1{margin:0;font-size:clamp(24px,4vw,42px)}
+    .muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .col-main{grid-column:span 8}
+    .col-side{grid-column:span 4}
+    @media(max-width:900px){.cards{grid-template-columns:1fr}.col-main,.col-side{grid-column:span 12}}
+    .panel{background:var(--panel);border:1px solid #1a2433;border-radius:16px;padding:16px}
+    .panel h2{margin:0 0 12px 0;font-size:18px}
+    .ticker{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .tile{background:#0e1622;border:1px solid #1c2635;border-radius:14px;padding:12px}
+    .tile .sym{font-weight:700}
+    .tile .chg{font-variant-numeric:tabular-nums}
+    .row{display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .ad{display:block;min-height:90px;border:1px dashed #2a3a55;border-radius:14px;background:repeating-linear-gradient(135deg,rgba(110,231,255,.06) 0 10px,rgba(155,255,206,.06) 10px 20px);padding:10px}
+    .ad small{color:#8aa0b9}
+    .list{display:grid;gap:12px}
+    .card{background:#0f1724;border:1px solid #1c283b;border-radius:14px;padding:14px}
+    .badge{font-size:12px;border:1px solid #293a59;border-radius:999px;padding:4px 8px;color:#a7b6cc}
+    .footer{padding:40px 0;color:#8aa0b9}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:12px;padding:2px 6px;border:1px solid #2a3a55;border-radius:8px;background:#0e1520;color:#b5c6e3}
+    .code{white-space:pre-wrap;word-wrap:break-word;background:#0e1520;border:1px solid #2a3a55;border-radius:12px;padding:12px;font-family:ui-monospace,Consolas,monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> <span>CrankMoteur Crypto</span></div>
+      <nav class="navlinks">
+        <a href="#prix">Prix</a>
+        <a href="#actus">Actus</a>
+        <a href="#guides">Guides</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn" aria-label="Basculer le thème">🌓 <span class="muted">Thème</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid" style="margin-top:16px">
+    <!-- 🪧 Annonce haut -->
+    <section id="ad-top" class="ad" aria-label="Annonce haut">
+      <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371779"></script>
+    </section>
+
+    <section class="hero">
+      <h1>Crypto en clair. Rapide, net, sans flafla.</h1>
+      <p class="muted">Tableau des prix en direct, veille express, et petits guides pour s’y retrouver sans se brûler les doigts.</p>
+      <div class="ticker" id="ticker" aria-live="polite"></div>
+    </section>
+
+    <section class="cards" style="margin-top:8px">
+      <div class="col-main">
+        <div class="panel">
+          <h2 id="actus">Actus & veille rapide</h2>
+          <!-- 🪧 Annonce in-feed -->
+          <div id="ad-infeed" class="ad" style="margin:8px 0">
+            <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371777"></script>
+          </div>
+          <div class="list" id="newsList"></div>
+        </div>
+      </div>
+
+      <aside class="col-side">
+        <div class="panel">
+          <h2>Annonces</h2>
+          <!-- 🪧 Annonce sidebar 1 -->
+          <div id="ad-side-1" class="ad">
+            <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371775"></script>
+          </div>
+          <!-- 🪧 Annonce sidebar 2 -->
+          <div id="ad-side-2" class="ad" style="margin-top:12px">
+            <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371773"></script>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- 🪧 Annonce bas -->
+    <section id="ad-footer" class="ad" style="margin-top:16px" aria-label="Annonce bas">
+      <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="371773"></script>
+    </section>
+
+    <section class="footer" id="contact">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="brand" style="margin-bottom:8px"><span class="dot"></span> <strong>CrankMoteur Crypto</strong></div>
+          <div>© <span id="year"></span> – Tous droits réservés.</div>
+          <div class="muted" style="margin-top:6px">Contenu informatif seulement. Faites vos propres recherches. Aucune incitation à investir.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click',()=>{
+      const d=document.documentElement; const dark=d.dataset.theme!=='light';
+      d.dataset.theme=dark?'light':'dark';
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const ids=['bitcoin','ethereum','solana'];
+    const vs=['usd','cad'];
+    const fmt=(n,cur)=> new Intl.NumberFormat('fr-CA',{style:'currency',currency:cur}).format(n);
+
+    async function loadPrices(){
+      const el=document.getElementById('ticker');
+      try{
+        const r=await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids.join(',')}&vs_currencies=${vs.join(',')}&include_24hr_change=true`);
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        const data=await r.json();
+        const map={bitcoin:'BTC',ethereum:'ETH',solana:'SOL'};
+        el.innerHTML='';
+        ids.forEach(id=>{
+          const p=data[id]||{}; const ch=p.usd_24h_change||0;
+          const sign=ch>=0?'+':''; const color=ch>=0?'var(--good)':'var(--bad)';
+          const div=document.createElement('div');
+          div.className='tile';
+          div.innerHTML=`<div class="row"><span class="sym">${map[id]}</span><span class="chg" style="color:${color}">${sign}${ch.toFixed(2)}%</span></div>
+          <div class="row"><span>USD</span><strong>${p.usd?fmt(p.usd,'USD'):'—'}</strong></div>
+          <div class="row"><span>CAD</span><strong>${p.cad?fmt(p.cad,'CAD'):'—'}</strong></div>`;
+          el.appendChild(div);
+        });
+      }catch(e){
+        el.innerHTML = '<div class="tile"><div class="sym">Prix hors ligne</div><div class="muted">Impossible de charger les prix maintenant.</div></div>';
+      }
+    }
+    loadPrices();
+    setInterval(loadPrices, 60_000);
+
+    const news=[
+      {t:'Le halving, et après ?',u:'#',tag:'Analyse',d:'Ce que l’histoire des cycles raconte…'},
+      {t:'Sécurité : check‑list 10 points',u:'#',tag:'Opsec',d:'Une routine simple pour éviter 90% des pièges.'},
+      {t:'Comprendre les L2 sans migraine',u:'#',tag:'Tech',d:'Rollups, validiums, expliqué sans jargon.'}
+    ];
+    const newsList=document.getElementById('newsList');
+    function paintNews(){
+      newsList.innerHTML='';
+      news.forEach(n=>{
+        const card=document.createElement('a');
+        card.href=n.u; card.className='card'; card.target='_blank' rel='noopener';
+        card.innerHTML=`<div class="row"><strong>${n.t}</strong><span class="badge">${n.tag}</span></div><p class="muted" style="margin:6px 0 0">${n.d}</p>`;
+        newsList.appendChild(card);
+      });
+    }
+    paintNews();
+  </script>
+</body>
+</html>
